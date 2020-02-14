@@ -8,7 +8,7 @@ class CreateForm extends BaseForm {
         parent::__construct($data);
         
         $this->data['attr']['id'] = 'create-form';
-        $this->data['buttons']['submit']['title'] = 'Create';
+        $this->data['buttons']['submit']['title'] = 'Sukurti Paslaugą';
     }
 
 }

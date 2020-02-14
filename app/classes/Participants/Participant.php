@@ -12,11 +12,9 @@ class Participant {
         } else {
             $this->data = [
                 'id' => null,
-                'name' => null,
-                'surname' => null,
-                'city' => null,
-                'age' => null,
-                'weapon' => null,
+                'service' => null,
+                'img' => null,
+                'description' => null,
             ];
         }
     }
@@ -31,11 +29,9 @@ class Participant {
         } else {
             $this->data['id'] = null;
         }
-        $this->setName($array['name'] ?? null);
-        $this->setSurname($array['surname'] ?? null);
-        $this->setCity($array['city'] ?? null);
-        $this->setAge($array['age'] ?? null);
-        $this->setWeapon($array['weapon'] ?? null);
+        $this->setService($array['service'] ?? null);
+        $this->setImg($array['img'] ?? null);
+        $this->setDescription($array['description'] ?? null);
     }
 
     /**
@@ -45,11 +41,9 @@ class Participant {
     public function getData() {
         return [
             'id' => $this->getId(),
-            'name' => $this->getName(),
-            'surname' => $this->getSurname(),
-            'city' => $this->getCity(),
-            'age' => $this->getAge(),
-            'weapon' => $this->getWeapon(),
+            'service' => $this->getService(),
+            'img' => $this->getImg(),
+            'description' => $this->getDescription(),
         ];
     }
 
@@ -68,79 +62,49 @@ class Participant {
     }
 
     /**
-     * Sets name
-     * @param string $name
+     * Sets service
+     * @param string $service
      */
-    public function setName(string $name) {
-        $this->data['name'] = $name;
+    public function setService(string $service) {
+        $this->data['service'] = $service;
     }
 
     /**
      * Returns name
      * @return string
      */
-    public function getName() {
-        return $this->data['name'];
+    public function getService() {
+        return $this->data['service'];
     }
 
     /**
-     * Sets data surname
-     * @param string $surname
+     * Sets data img
+     * @param string $img
      */
-    public function setSurname(string $surname) {
-        $this->data['surname'] = $surname;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSurname() {
-        return $this->data['surname'];
-    }
-
-    /**
-     * Sets data city
-     * @param string $city
-     */
-    public function setCity(string $city) {
-        $this->data['city'] = $city;
+    public function setImg(string $img) {
+        $this->data['img'] = $img;
     }
 
     /**
      * @return mixed
      */
-    public function getCity() {
-        return $this->data['city'];
+    public function getImg() {
+        return $this->data['img'];
     }
 
     /**
-     * Sets data age
-     * @param string $age
+     * Sets data description
+     * @param string $description
      */
-    public function setAge(string $age) {
-        $this->data['age'] = $age;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAge() {
-        return $this->data['age'];
-    }
-
-    /**
-     * Sets data weapon
-     * @param string $weapon
-     */
-    public function setWeapon(string $weapon) {
-        $this->data['weapon'] = $weapon;
+    public function setDescription(string $description) {
+        $this->data['description'] = $description;
     }
 
     /**
      * @return mixed
      */
-    public function getWeapon() {
-        return $this->data['weapon'];
+    public function getDescription() {
+        return $this->data['description'];
     }
 
 }

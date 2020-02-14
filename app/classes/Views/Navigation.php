@@ -10,7 +10,7 @@ class Navigation extends \Core\View {
         parent::__construct($data);
 
         $this->addLink('left', '/index.php', 'Titulinis');
-        $this->addLink('left', '/feedback.php', 'Atsiliepimai');
+        $this->addLink('left', '/products.php', 'Atsiliepimai');
         
         if (App::$session->userLoggedIn()) {
             $user = App::$session->getUser();

@@ -54,7 +54,7 @@ class RegisterForm extends \Core\Views\Form
                     ],
                 ],
                 'phone' => [
-                    'label' => 'Telefono Numeris (neprivaloma)',
+                    'label' => 'Telefono Numeris',
                     'type' => 'text',
                     'extra' => [
                         'validators' => [

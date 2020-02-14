@@ -3,14 +3,14 @@ require '../bootloader.php';
 
 use App\App;
 
-$createForm = new \App\Participants\Views\CreateForm();
-$updateForm = new \App\Participants\Views\UpdateForm();
+$createForm = new \App\Products\Views\CreateForm();
+$updateForm = new \App\Products\Views\UpdateForm();
 $navigation = new \App\Views\Navigation();
 $footer = new \App\Views\Footer();
 
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /login.php');
-//}
+if (!App::$session->userLoggedIn()) {
+    header('Location: /login.php');
+}
 ?>
 <html>
 <head>
@@ -29,10 +29,9 @@ $footer = new \App\Views\Footer();
 </header>
 
 <main>
-    <div class="bg_img"></div>
-    <section class="wrapper nav-color">
+    <section class="wrapper">
         <div class="block">
-            <h1></h1>
+            <h1>Pridėti komentarą:</h1>
             <?php print $createForm->render(); ?>
         </div>
         <div class="block">
@@ -40,10 +39,9 @@ $footer = new \App\Views\Footer();
                 <table>
                     <thead>
                     <tr>
-                        <!--                                    <th>Nr.</th>-->
-                        <th>Paslaugos Nuotrauka</th>
-                        <th>Paslauga</th>
-                        <th>Paslaugos Aprašymas</th>
+                        <th>Vardas</th>
+                        <th>Komentaras</th>
+                        <th>Data</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -53,9 +51,6 @@ $footer = new \App\Views\Footer();
             </div>
         </div>
     </section>
-    <div>
-        <iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2196022783774!2d25.335696616110763!3d54.72335198029067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e7d814e149%3A0xdd7887e198efd4c7!2sSaul%C4%97tekio%20al.%2015%2C%20Vilnius%2010221!5e0!3m2!1sen!2slt!4v1581657421446!5m2!1sen!2slt" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    </div>
 
     <!-- Update Modal -->
     <div id="update-modal" class="modal">
@@ -71,6 +66,6 @@ $footer = new \App\Views\Footer();
     <?php print $footer->render(); ?>
 </footer>
 
-<script defer src="media/js/app.js"></script>
+<script defer src="media/js/products.js"></script>
 </body>
 </html>

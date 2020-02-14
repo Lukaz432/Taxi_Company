@@ -2,58 +2,38 @@
 
 namespace App\Participants\Views;
 
-class ApiForm extends \Core\Views\Form {
+class ApiForm extends \Core\Views\Form
+{
 
-    public function __construct($data = []) {
+    public function __construct($data = [])
+    {
         $this->data = [
             'fields' => [
-                'name' => [
+                'service' => [
                     'extra' => [
                         'validators' => [
                             'validate_not_empty',
-                            'validate_has_no_space',
-                            'validate_first_letter_is_capital'
                         ]
                     ]
                 ],
-                'surname' => [
+                'img' => [
                     'extra' => [
                         'validators' => [
                             'validate_not_empty',
-                            'validate_has_no_space',
-                            'validate_first_letter_is_capital'
                         ]
                     ]
                 ],
-                'city' => [
+                'description' => [
                     'extra' => [
                         'validators' => [
                             'validate_not_empty',
-                            'validate_first_letter_is_capital'
                         ]
                     ]
                 ],
-                'age' => [
-                    'extra' => [
-                        'validators' => [
-                            'validate_not_empty',
-                            'validate_has_no_space',
-                            'validate_age'
-                        ]
-                    ]
-                ],
-                'weapon' => [
-                    'extra' => [
-                        'validators' => [
-                            'validate_not_empty',
-                            'validate_has_no_space'
-                        ]
-                    ]
-                ],
-            ],
-            'callbacks' => [
-                'success' => 'form_success',
-                'fail' => 'form_fail'
+                'callbacks' => [
+                    'success' => 'form_success',
+                    'fail' => 'form_fail'
+                ]
             ]
         ];
     }
