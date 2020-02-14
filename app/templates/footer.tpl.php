@@ -1,0 +1,1 @@
+<span class="footer_rights">&copy; <?php print date('Y') ?>. Lukas Palavinskas, all rights reserved.</span>

@@ -1,0 +1,9 @@
+{
+  "name": "Taxi_Feedback_Project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/classes",
+      "Core\\": "core/classes"
+    }
+  }
+}
